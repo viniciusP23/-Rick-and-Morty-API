@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    padding:40px;
+    color:#fff;
+    flex-wrap:wrap;
+}
+
+/* ---------- Formulário ---------- */
+
+form{
+    width:320px;
+    background:#1f2937;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    border:2px solid #22c55e;
+}
+
+form h2{
+    text-align:center;
+    margin-bottom:18px;
+    color:#22c55e;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-size:.95rem;
+}
+
+input[type="number"]{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    border:none;
+    border-radius:10px;
+    background:#374151;
+    color:#fff;
+    outline:none;
+}
+
+input[type="checkbox"]{
+    margin-right:8px;
+    accent-color:#22c55e;
+}
+
+hr{
+    margin:20px 0;
+    border:1px solid #374151;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:12px;
+}
+
+#btn-go{
+    background:#22c55e;
+    color:#fff;
+}
+
+#btn-go:hover{
+    background:#16a34a;
+    transform:translateY(-2px);
+}
+
+#btn-reset{
+    background:#ef4444;
+    color:#fff;
+}
+
+#btn-reset:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+/* ---------- Crachá ---------- */
+
+.result-style{
+    width:330px;
+    background:#f8fafc;
+    color:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+    position:relative;
+}
+
+/* Parte verde superior */
+.result-style::before{
+    content:"RICK & MORTY";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:linear-gradient(90deg,#22c55e,#65a30d);
+    color:white;
+    font-weight:700;
+    letter-spacing:2px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:95px auto 20px;
+    border:6px solid white;
+    background:#ddd;
+}
+
+#content{
+    padding:0 25px 25px;
+}
+
+#content h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#content p{
+    background:#e2e8f0;
+    padding:10px 14px;
+    border-radius:10px;
+    margin-bottom:10px;
+    font-size:.95rem;
+    font-weight:500;
+}
+
+#content span{
+    font-weight:700;
+    color:#22c55e;
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+
+    form,
+    .result-style{
+        width:100%;
+        max-width:350px;
+    }
+}
